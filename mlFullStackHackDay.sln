@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mlFullStackHackDay.Api", "mlFullStackHackDay.Api\mlFullStackHackDay.Api.csproj", "{21B39E56-1A68-4DDC-96AE-666B2B82F635}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mlFullStackHackDay.Tests", "mlFullStackHackDay.Tests\mlFullStackHackDay.Tests.csproj", "{5BA81CE6-862B-4880-8DCF-677E14B785A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21B39E56-1A68-4DDC-96AE-666B2B82F635}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21B39E56-1A68-4DDC-96AE-666B2B82F635}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21B39E56-1A68-4DDC-96AE-666B2B82F635}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21B39E56-1A68-4DDC-96AE-666B2B82F635}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BA81CE6-862B-4880-8DCF-677E14B785A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BA81CE6-862B-4880-8DCF-677E14B785A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BA81CE6-862B-4880-8DCF-677E14B785A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BA81CE6-862B-4880-8DCF-677E14B785A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

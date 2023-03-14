@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "z/B4z8H14BwkgCF+VfWCj4r+71vA8qEfwux4LApVwCI=",
+  "Source": "mlFullStackHackDay.Api",
+  "BasePath": "_content/mlFullStackHackDay.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
