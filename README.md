@@ -21,7 +21,7 @@ npm run dev
 3)
 Create Models
 
-4)
+4)Code Generator
 cd ProjectName.Api
 dotnet tool install -g dotnet-aspnet-codegenerator
 dotnet tool install -g dotnet-ef
@@ -31,14 +31,25 @@ dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 dotnet add package Microsoft.EntityFrameworkCore.Tools
 dotnet aspnet-codegenerator controller -name CustomersController -async -api -m Customer -dc ApplicationDbContext --relativeFolderPath Controllers
-dotnet aspnet-codegenerator controller -name AddressesController -async -api -m Address -dc ApplicationDbContext --relativeFolderPath Controllers
+-If no models yet
+dotnet aspnet-codegenerator controller -name SentimentController -async -api --relativeFolderPath Controllers
 dotnet run
 
-5)
+5) Database
 Paste in appsettings.json 
 "ConnectionStrings": {
-    "ApplicationDbContext": "Server=localhost,1433;Database=TestDataBase;User Id=sa;Password=Password_2_Change_4_Real_Cases_&;TrustServerCertificate=True;"
+    "DefaultConnection": "Server=localhost,1433;Database=TestDataBase;User Id=sa;Password=Password_2_Change_4_Real_Cases_&;TrustServerCertificate=True;"
   }
+-Mkdir ProjectName.Api/Data
+-ApplicationDbContext.cs
+-Add to Program.cs
+builder.Services.AddDbContext<ApplicationDbContext>(options => 
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+-Open Docker, start sql server
+-Open Azure Data Studio
+-Create new database named TestDataBase
+-Make connection strings secret
+
 dotnet ef migrations add FirstMigration
 dotnet ef database update
 
@@ -51,6 +62,8 @@ using (var scope = app.Services.CreateScope())
   var services = scope.ServiceProvider;
   SeedDataBogus.Initialize(services);
 }
+-OR
+-Load from file
 
 7)
 Add CORS to PRogram.cs to share the IP address with FrontEnd
@@ -76,8 +89,14 @@ Create the API
 8) ML
 cd ProjectName.Api
 dotnet tool install -g mlnet-osx-x64
+dotnet add package Microsoft.ML
+dotnet add package Microsoft.Extensions.ML
 or
 ~/.dotnet/tools/mlnet
 -Add data file to folder ML/Data
 mkdir  ML
+-in appsettings.json add this
+ "MLModel": {
+    "MLModelFilePath": "ML/SentimentModel.zip"
+  }
 
