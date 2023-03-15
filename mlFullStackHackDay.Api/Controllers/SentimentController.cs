@@ -4,8 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.ML;
+using mlFullStackHackDay.Api.Data;
 using mlFullStackHackDay.Api.ML.DataModels;
+using mlFullStackHackDay.Api.Models;
 
 namespace mlFullStackHackDay.Api.Controllers
 {
@@ -14,10 +17,12 @@ namespace mlFullStackHackDay.Api.Controllers
     public class SentimentController : ControllerBase
     {
         private readonly PredictionEnginePool<SampleObservation, SamplePrediction> _predictionEnginePool;
+        private readonly ApplicationDbContext _context;
 
-        public SentimentController(PredictionEnginePool<SampleObservation, SamplePrediction> predictionEnginePool)
+        public SentimentController(PredictionEnginePool<SampleObservation, SamplePrediction> predictionEnginePool, ApplicationDbContext context)
         {
             _predictionEnginePool = predictionEnginePool;
+            _context = context;
         }
         
         [HttpGet]
@@ -42,5 +47,14 @@ namespace mlFullStackHackDay.Api.Controllers
         {
             return 100 * (1.0f / (1.0f + (float)Math.Exp(-value)));
         }
+
+        [HttpGet]
+        [Route("/[action]")]
+        public async Task<ActionResult<User>> GetUsers()
+        {
+            var users = await _context.Users.Include(u => u.Sentences).ToListAsync();
+            return Ok(users);
+        }
+
     }
 }

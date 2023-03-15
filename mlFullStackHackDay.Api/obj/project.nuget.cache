@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vgu7H852H3PLdbCjDwzuspRq/L6hUotiEJ9eNiqfsnb5TIvEZs9RJdcE/brTrGfs8MfLTvS41ZgLZKcBfSQ4HA==",
+  "dgSpecHash": "uhqcS2baXvvWQx+R/TEM+OgzbcqTKuVrqAPPbTvooa4cdZZfCU+FsUG8puKa9yLEtRmIiuf7PHvhFvBKhaQ2UA==",
   "success": true,
-  "projectFilePath": "/Users/salt-dev/newTHANOS/MINI_PROJECTS/ML_Full_Stack_Tests_at_Salt/mlFullStackHackDay.Api/mlFullStackHackDay.Api.csproj",
+  "projectFilePath": "/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/mlFullStackHackDay.Api.csproj",
   "expectedPackageFiles": [
     "/Users/salt-dev/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/salt-dev/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",

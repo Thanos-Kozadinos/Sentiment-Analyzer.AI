@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/salt-dev/newTHANOS/MINI_PROJECTS/ML_Full_Stack_Tests_at_Salt/mlFullStackHackDay.Tests/mlFullStackHackDay.Tests.csproj": {}
+    "/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Tests/mlFullStackHackDay.Tests.csproj": {}
   },
   "projects": {
-    "/Users/salt-dev/newTHANOS/MINI_PROJECTS/ML_Full_Stack_Tests_at_Salt/mlFullStackHackDay.Api/mlFullStackHackDay.Api.csproj": {
+    "/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/mlFullStackHackDay.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/salt-dev/newTHANOS/MINI_PROJECTS/ML_Full_Stack_Tests_at_Salt/mlFullStackHackDay.Api/mlFullStackHackDay.Api.csproj",
+        "projectUniqueName": "/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/mlFullStackHackDay.Api.csproj",
         "projectName": "mlFullStackHackDay.Api",
-        "projectPath": "/Users/salt-dev/newTHANOS/MINI_PROJECTS/ML_Full_Stack_Tests_at_Salt/mlFullStackHackDay.Api/mlFullStackHackDay.Api.csproj",
+        "projectPath": "/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/mlFullStackHackDay.Api.csproj",
         "packagesPath": "/Users/salt-dev/.nuget/packages/",
-        "outputPath": "/Users/salt-dev/newTHANOS/MINI_PROJECTS/ML_Full_Stack_Tests_at_Salt/mlFullStackHackDay.Api/obj/",
+        "outputPath": "/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/salt-dev/.nuget/NuGet/NuGet.Config"
@@ -102,14 +102,14 @@
         }
       }
     },
-    "/Users/salt-dev/newTHANOS/MINI_PROJECTS/ML_Full_Stack_Tests_at_Salt/mlFullStackHackDay.Tests/mlFullStackHackDay.Tests.csproj": {
+    "/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Tests/mlFullStackHackDay.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/salt-dev/newTHANOS/MINI_PROJECTS/ML_Full_Stack_Tests_at_Salt/mlFullStackHackDay.Tests/mlFullStackHackDay.Tests.csproj",
+        "projectUniqueName": "/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Tests/mlFullStackHackDay.Tests.csproj",
         "projectName": "mlFullStackHackDay.Tests",
-        "projectPath": "/Users/salt-dev/newTHANOS/MINI_PROJECTS/ML_Full_Stack_Tests_at_Salt/mlFullStackHackDay.Tests/mlFullStackHackDay.Tests.csproj",
+        "projectPath": "/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Tests/mlFullStackHackDay.Tests.csproj",
         "packagesPath": "/Users/salt-dev/.nuget/packages/",
-        "outputPath": "/Users/salt-dev/newTHANOS/MINI_PROJECTS/ML_Full_Stack_Tests_at_Salt/mlFullStackHackDay.Tests/obj/",
+        "outputPath": "/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/salt-dev/.nuget/NuGet/NuGet.Config"
@@ -124,8 +124,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/salt-dev/newTHANOS/MINI_PROJECTS/ML_Full_Stack_Tests_at_Salt/mlFullStackHackDay.Api/mlFullStackHackDay.Api.csproj": {
-                "projectPath": "/Users/salt-dev/newTHANOS/MINI_PROJECTS/ML_Full_Stack_Tests_at_Salt/mlFullStackHackDay.Api/mlFullStackHackDay.Api.csproj"
+              "/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/mlFullStackHackDay.Api.csproj": {
+                "projectPath": "/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/mlFullStackHackDay.Api.csproj"
               }
             }
           }

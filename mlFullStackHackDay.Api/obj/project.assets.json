@@ -11406,11 +11406,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/salt-dev/newTHANOS/MINI_PROJECTS/ML_Full_Stack_Tests_at_Salt/mlFullStackHackDay.Api/mlFullStackHackDay.Api.csproj",
+      "projectUniqueName": "/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/mlFullStackHackDay.Api.csproj",
       "projectName": "mlFullStackHackDay.Api",
-      "projectPath": "/Users/salt-dev/newTHANOS/MINI_PROJECTS/ML_Full_Stack_Tests_at_Salt/mlFullStackHackDay.Api/mlFullStackHackDay.Api.csproj",
+      "projectPath": "/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/mlFullStackHackDay.Api.csproj",
       "packagesPath": "/Users/salt-dev/.nuget/packages/",
-      "outputPath": "/Users/salt-dev/newTHANOS/MINI_PROJECTS/ML_Full_Stack_Tests_at_Salt/mlFullStackHackDay.Api/obj/",
+      "outputPath": "/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/salt-dev/.nuget/NuGet/NuGet.Config"
