@@ -15,8 +15,8 @@ const App: FC = () => {
     id: 0,
     name: 'init',
     sentences: [defaultSentenceData]
-}
-  
+  }
+
   const defaultUsersData: userRequest = {
     users: [defaultUserData]
   };
@@ -38,11 +38,14 @@ const App: FC = () => {
     <div className="App">
       <div> TEST</div>
       <h1>Sentiment_Analyzer.AI</h1>
-      <div></div>
-      <div>{inputUsersData.map(u =><div>{u.name}</div>)}</div>
-      <div>{inputUsersData.map(u =><div>{u.sentences.map(s=> <div>{s.text}</div>)}</div>)}</div>
-      <div>{inputUsersData.map(u => u.sentences.map(s => <div>{s.realSentiment? "true":"false"}</div>))}</div>
-
+      <div >
+        <div className='testClass'>{inputUsersData.map(u => <div>
+          <div>{u.name}</div>
+          <div>{u.sentences.map(s => <div>{s.text}</div>)}</div>
+          </div>
+        
+        )}</div>
+      </div>
     </div>
   )
 }
