@@ -21,10 +21,5 @@ export const getUsersDataAxios = async () => {
     return  response.data;
 };
 
-export const getUsers = async () => {
-    const response = await fetch('http://localhost:5290/GetUsers');
-    const json = (await response.json()) as IUser[];
-    return json;
-  };
   
 export {}

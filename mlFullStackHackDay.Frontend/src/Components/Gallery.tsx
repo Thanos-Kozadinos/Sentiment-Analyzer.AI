@@ -8,6 +8,6 @@ type GalleryProps = {
   export const Gallery: FC<GalleryProps> = ({ users}) =>{
 
     return(
-        <div>{users[0].Name}</div>
+        <></>
     )
   }

@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import { getUsers, getUsersDataAxios, ISentence, IUser, userRequest } from './Services/Services';
+import { getUsersDataAxios, ISentence, IUser, userRequest } from './Services/Services';
 import { Gallery } from './Components/Gallery';
 
 const App: FC = () => {

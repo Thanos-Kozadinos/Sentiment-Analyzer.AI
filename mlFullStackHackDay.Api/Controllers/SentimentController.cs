@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.ML;
 using mlFullStackHackDay.Api.Data;
+using mlFullStackHackDay.Api.DTOs;
 using mlFullStackHackDay.Api.ML.DataModels;
 using mlFullStackHackDay.Api.Models;
 
@@ -24,9 +25,10 @@ namespace mlFullStackHackDay.Api.Controllers
             _predictionEnginePool = predictionEnginePool;
             _context = context;
         }
-        
+
         [HttpGet]
-        public ActionResult<string> PredictSentiment([FromQuery]string sentimentText)
+        [Route("/[action]")]
+        public ActionResult<string> PredictSentiment([FromQuery] string sentimentText)
         {
             SampleObservation sampleData = new SampleObservation() { Text = sentimentText };
 
@@ -56,5 +58,41 @@ namespace mlFullStackHackDay.Api.Controllers
             return Ok(users);
         }
 
+        [HttpPost]
+        public async Task<ActionResult<User>> createUser(CreateUserDTO createUserDTO)
+        {
+            var newUser = new User
+            {
+                Name = createUserDTO.Name
+            };
+
+            _context.Users.Add(newUser);
+            await _context.SaveChangesAsync();
+
+            var userId = await _context.Users
+                .Where(user => user.Name == user.Name)
+                .FirstOrDefaultAsync();
+
+            SampleObservation sampleData = new SampleObservation() { Text = createUserDTO.Text };
+            //Predict sentiment
+            SamplePrediction prediction = _predictionEnginePool.Predict(sampleData);
+
+            var newSentence = new Sentence
+            {
+                Text = createUserDTO.Text,
+                ForecastedSentiment = prediction.Prediction,
+                UserId = userId.Id
+            };
+
+            var userFinal = await _context.Users
+                .Include(i => i.Sentences)
+                .FirstOrDefaultAsync(user => user.Name == user.Name);
+            
+            userFinal.Sentences.Add(newSentence);
+
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
     }
 }
