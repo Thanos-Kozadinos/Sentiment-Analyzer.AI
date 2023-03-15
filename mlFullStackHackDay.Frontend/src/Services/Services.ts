@@ -1,23 +1,23 @@
 import axios from 'axios';
 
 export interface ISentence {
-    Id: number,
-    Text: string,
-    ForecastedSentiment: boolean,
-    RealSentiment: boolean 
+    id: number,
+    text: string,
+    forecastedSentiment: boolean,
+    realSentiment: boolean 
 }
 
 export interface IUser {
-    Id: number,
-    Name: string,
-    Sentences: ISentence[]
+    id: number,
+    name: string,
+    sentences: ISentence[]
 }
 export type userRequest = {
     users: IUser[]
 };
 
 export const getUsersDataAxios = async () => {
-    const response = await axios.get<userRequest>('http://localhost:5290/GetUsers');
+    const response = await axios.get<IUser[]>('http://localhost:5290/GetUsers');
     return  response.data;
 };
 
