@@ -103,5 +103,16 @@ namespace mlFullStackHackDay.Api.Controllers
             // return Ok(newUser);
             return CreatedAtAction(nameof(GetOneUser), new { id = newUser.Id }, newUser);
         }
+
+        [HttpGet]
+        public async Task<ActionResult<User>> GetDataFromFile()
+        {
+            var fileData = await _context.Files.ToListAsync();
+            // if (users is null)
+            // {
+            //     return NotFound();
+            // }
+            return Ok(fileData);
+        }
     }
 }

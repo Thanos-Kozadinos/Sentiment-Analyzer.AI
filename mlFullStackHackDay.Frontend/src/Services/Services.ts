@@ -19,9 +19,20 @@ export interface INewUser {
     text: string
 }
 
+export interface IFile {
+  id: number,
+  text: string,
+  realSentiment: boolean
+}
+
 export const getUsersDataAxios = async () => {
     const response = await axios.get<IUser[]>('http://localhost:5290/api/GetUsers');
     return  response.data;
+};
+
+export const getDataFromFileAxios = async () => {
+  const response = await axios.get<IFile[]>('http://localhost:5290/api/GetDataFromFile');
+  return  response.data;
 };
 
 export const addNewUser = async (user: INewUser)=> {

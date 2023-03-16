@@ -1,5 +1,5 @@
 import { FC, useEffect, useRef, useState } from 'react'
-import './Main.css'
+import './Home.css'
 import { addNewUser, getUsersDataAxios, INewUser, ISentence, IUser, } from '../Services/Services';
 import { Gallery } from './Gallery';
 import { AddUserForm } from './AddUserForm';

@@ -5,8 +5,8 @@ import { Gallery } from './Components/Gallery';
 import { AddUserForm } from './Components/AddUserForm';
 import Navbar from './Components/Navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Main from './Components/Main';
 import Datasets from './Components/Datasets';
+import Home from './Components/Home';
 
 const App: FC = () => {
 
@@ -17,7 +17,7 @@ const App: FC = () => {
         <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Main />} />
+            <Route path="/" element={<Home />} />
             <Route path="/datasets" element={<Datasets />} />
           </Routes>
         </BrowserRouter>
