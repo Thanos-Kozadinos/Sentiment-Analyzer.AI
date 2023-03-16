@@ -2,9 +2,19 @@
     display: flex;
     /* border: 1px solid black; */
     flex-direction: row;
-    justify-content:space-between
+    justify-content:space-between;
+    /* font-family: 'Press Start 2P', cursive; */
+    /* font-size: large; */
+    max-height: 500px;
+
+    font-family: 'Inconsolata', monospace;
+    font-size:x-large
   }
 
-.SentenceCard{
-    border: 1px solid black;
+.Gallery-SentenceCard{
+    width: 80%;
+}
+
+.Gallery-UserCard{
+    overflow: scroll;
 }

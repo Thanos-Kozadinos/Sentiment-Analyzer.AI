@@ -8,7 +8,7 @@ type UserCardProps = {
 }
 
 export const UserCard: FC<UserCardProps> = ({ user, showSentencesOfUser }) => {
-console.log(user);
+// console.log(user);
     return (
 
         <div className='Gallery_UserCard-user-name' onClick={() => { showSentencesOfUser(user.id) }}>

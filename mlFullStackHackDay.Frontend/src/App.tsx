@@ -1,5 +1,4 @@
 import { FC, useEffect, useRef, useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import { addNewUser, getUsersDataAxios, INewUser, ISentence, IUser, } from './Services/Services';
 import { Gallery } from './Components/Gallery';
@@ -24,27 +23,34 @@ const App: FC = () => {
 
   const loadUserData = async () => {
     const users = await getUsersDataAxios();
-    // setUsersLength(users.length)
-    // setInputUsersData(users.reverse());
-    setInputUsersData(users);
+    setUsersLength(users.slice(-1)[0].id)
+    setInputUsersData(users.reverse());
+
   }
 
-  const addNewUsertoList = async (newDev: INewUser) => {
-    const newUser = await addNewUser(newDev);
-    setInputUsersData([...inputUsersData, newUser])
+
+  const addNewUsertoList = async (newUser: INewUser) => {
+    const user = await addNewUser(newUser);
+    const users = await getUsersDataAxios();
+    setUsersLength(users.slice(-1)[0].id)
+    setInputUsersData(users.reverse());
   }
 
-  
   useEffect(() => {
     loadUserData();
   }, [])
-  
-  if (usersLength > 0)
+
+  if (usersLength > 1)
   {
     return (
       <div className="App">
-        <h1>Sentiment_Analyzer.AI</h1>
+        <h1 className='App-h1'>Sentiment.AI</h1>
         <AddUserForm addNewUsertoList={addNewUsertoList}/>
+        <div className='App-h3'>
+        <h3>Names</h3>
+        <h3>Sentences</h3>
+        <h3>Sentiment</h3>
+        </div>
         <div >
           <Gallery users={inputUsersData} usersLength={usersLength}/>
         </div>
@@ -53,7 +59,7 @@ const App: FC = () => {
   }
   return (
     <div className="App">
-      <h1>Sentiment_Analyzer.AI</h1>
+      <h1>Sentiment.AI</h1>
     </div>
   )
 }

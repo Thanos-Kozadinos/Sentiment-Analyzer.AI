@@ -1,6 +1,7 @@
 import React, { FC, SyntheticEvent, useEffect, useState } from 'react'
-import { INewUser, IUser, } from '../Services/Services'
-import './AddUserForm.css';
+import { INewUser, ISentence, IUser, } from '../Services/Services'
+import './AddUserForm.scss';
+// @use '/AddUserForm.scss';
 
 type AddUserFormProps = {
     addNewUsertoList: (user: INewUser) => void
@@ -18,18 +19,15 @@ export const AddUserForm: FC<AddUserFormProps> = ({ addNewUsertoList }) => {
         }
         addNewUsertoList(newUser)
     }
-    useEffect(() => {
-      }, [])
-
     return (
         <form className='add-dev-form' onSubmit={onFormSubmit}>
-            <input onChange={(e) => {
+            <input className='AddUserForm-name' onChange={(e) => {
                 setUserName(e.target.value);
             }} placeholder='Enter user name' type="text" />
-            <input onChange={(e) => {
+            <input className='AddUserForm-sentence' onChange={(e) => {
                 setSentimentText(e.target.value);
             }} placeholder='Enter sentence for sentiment analysis' type="text" />
-            <button>Add</button>
+            <button className='AddUserForm-buton'>Add</button>
         </form>
     )
 }

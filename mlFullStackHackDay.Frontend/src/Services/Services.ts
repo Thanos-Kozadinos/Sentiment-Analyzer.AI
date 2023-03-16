@@ -24,7 +24,7 @@ export const getUsersDataAxios = async () => {
     return  response.data;
 };
 
-export const addNewUser = async (user: INewUser) => {
+export const addNewUser = async (user: INewUser)=> {
     const response = await fetch("http://localhost:5290/api/createUser", {
       method: "POST",
       body: JSON.stringify(user),

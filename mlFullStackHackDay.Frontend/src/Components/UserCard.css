@@ -1,6 +1,19 @@
 .Gallery_UserCard-user-name{
     display: flex;
-    border: 1px solid black;
+    border-bottom: 1px solid rgb(133, 131, 131);
     flex-direction: column;
     justify-content: space-evenly;
+    border-radius: 30%;
+    
+  }
+
+  .Gallery_UserCard-user-name:hover{
+    background-color: rgb(133, 131, 131);
+    /* cursor: pointer; */
+    cursor: wait;
+  }
+
+  .Gallery_UserCard-user-name:active{
+    background-color: rgb(212, 136, 200);
+
   }
