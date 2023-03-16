@@ -1,0 +1,6 @@
+.Gallery_UserCard-user-name{
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }

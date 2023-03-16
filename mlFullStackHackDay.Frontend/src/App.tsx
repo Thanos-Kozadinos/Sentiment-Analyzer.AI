@@ -9,6 +9,7 @@ const App: FC = () => {
     id: 0,
     text: "init",
     forecastedSentiment: true,
+    probability: 0,
     realSentiment: true
   };
   const defaultUserData: IUser = {
@@ -28,23 +29,22 @@ const App: FC = () => {
     setInputUsersData(await getUsersDataAxios());
   }
 
+  
   useEffect(() => {
     loadUserData();
   }, [])
-  console.log(inputUsersData);
-  const thanos = inputUsersData[0].name;
-  // console.log(thanos)
+ 
   return (
     <div className="App">
-      <div> TEST</div>
       <h1>Sentiment_Analyzer.AI</h1>
       <div >
-        <div className='testClass'>{inputUsersData.map(u => <div>
+        <Gallery users={inputUsersData}/>
+        {/* <div className='testClass'>{inputUsersData.map(u => <div>
           <div>{u.name}</div>
           <div>{u.sentences.map(s => <div>{s.text}</div>)}</div>
           </div>
         
-        )}</div>
+        )}</div> */}
       </div>
     </div>
   )

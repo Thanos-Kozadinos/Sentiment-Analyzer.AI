@@ -13,7 +13,7 @@ using mlFullStackHackDay.Api.Models;
 
 namespace mlFullStackHackDay.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[action]")]
     [ApiController]
     public class SentimentController : ControllerBase
     {
@@ -27,7 +27,7 @@ namespace mlFullStackHackDay.Api.Controllers
         }
 
         [HttpGet]
-        [Route("/[action]")]
+        // [Route("/[action]")]
         public ActionResult<string> PredictSentiment([FromQuery] string sentimentText)
         {
             SampleObservation sampleData = new SampleObservation() { Text = sentimentText };
@@ -38,7 +38,8 @@ namespace mlFullStackHackDay.Api.Controllers
             bool isToxic = prediction.Prediction;
             bool test = prediction.Prediction;
 
-            float probability = CalculatePercentage(prediction.Score);
+            // float probability = CalculatePercentage(prediction.Score);
+            var probability = prediction.Probability;
             string retVal = $"Prediction: Is Toxic?: '{isToxic.ToString()}' with {probability.ToString()}% probability of toxicity  for the text '{sentimentText}'";
 
 
@@ -51,28 +52,33 @@ namespace mlFullStackHackDay.Api.Controllers
         }
 
         [HttpGet]
-        [Route("/[action]")]
         public async Task<ActionResult<User>> GetUsers()
         {
             var users = await _context.Users.Include(u => u.Sentences).ToListAsync();
+            // if (users is null)
+            // {
+            //     return NotFound();
+            // }
             return Ok(users);
         }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<User>> GetOneUser(int id)
+        {
+            var user = await _context.Users
+                .Include(u => u.Sentences)
+                .FirstOrDefaultAsync(us => us.Id == id);
+            // if (user is null)
+            // {
+            //     return NotFound();
+            // }
+            return Ok(user);
+        }
+
 
         [HttpPost]
         public async Task<ActionResult<User>> createUser(CreateUserDTO createUserDTO)
         {
-            var newUser = new User
-            {
-                Name = createUserDTO.Name
-            };
-
-            _context.Users.Add(newUser);
-            await _context.SaveChangesAsync();
-
-            var userId = await _context.Users
-                .Where(user => user.Name == user.Name)
-                .FirstOrDefaultAsync();
-
             SampleObservation sampleData = new SampleObservation() { Text = createUserDTO.Text };
             //Predict sentiment
             SamplePrediction prediction = _predictionEnginePool.Predict(sampleData);
@@ -81,18 +87,21 @@ namespace mlFullStackHackDay.Api.Controllers
             {
                 Text = createUserDTO.Text,
                 ForecastedSentiment = prediction.Prediction,
-                UserId = userId.Id
+                Probability = prediction.Probability
+            };
+            List<Sentence> sentenceList = new List<Sentence>();
+            sentenceList.Add(newSentence);
+
+            var newUser = new User
+            {
+                Name = createUserDTO.Name,
+                Sentences = sentenceList
             };
 
-            var userFinal = await _context.Users
-                .Include(i => i.Sentences)
-                .FirstOrDefaultAsync(user => user.Name == user.Name);
-            
-            userFinal.Sentences.Add(newSentence);
-
+            _context.Users.Add(newUser);
             await _context.SaveChangesAsync();
-
-            return Ok();
+            // return Ok(newUser);
+            return CreatedAtAction(nameof(GetOneUser), new { id = newUser.Id }, newUser);
         }
     }
 }

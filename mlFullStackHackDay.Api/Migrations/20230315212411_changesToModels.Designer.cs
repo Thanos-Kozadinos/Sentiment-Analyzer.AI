@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using mlFullStackHackDay.Api.Data;
 
@@ -11,9 +12,11 @@ using mlFullStackHackDay.Api.Data;
 namespace mlFullStackHackDay.Api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230315212411_changesToModels")]
+    partial class changesToModels
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,9 +35,6 @@ namespace mlFullStackHackDay.Api.Migrations
 
                     b.Property<bool?>("ForecastedSentiment")
                         .HasColumnType("bit");
-
-                    b.Property<float?>("Probability")
-                        .HasColumnType("real");
 
                     b.Property<bool?>("RealSentiment")
                         .HasColumnType("bit");

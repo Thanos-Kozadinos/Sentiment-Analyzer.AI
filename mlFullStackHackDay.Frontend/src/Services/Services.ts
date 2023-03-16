@@ -4,6 +4,7 @@ export interface ISentence {
     id: number,
     text: string,
     forecastedSentiment: boolean,
+    probability: number,
     realSentiment: boolean 
 }
 
@@ -17,7 +18,7 @@ export type userRequest = {
 };
 
 export const getUsersDataAxios = async () => {
-    const response = await axios.get<IUser[]>('http://localhost:5290/GetUsers');
+    const response = await axios.get<IUser[]>('http://localhost:5290/api/GetUsers');
     return  response.data;
 };
 

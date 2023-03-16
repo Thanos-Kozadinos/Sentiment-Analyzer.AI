@@ -1,0 +1,10 @@
+.Gallery{
+    display: flex;
+    /* border: 1px solid black; */
+    flex-direction: row;
+    justify-content:space-between
+  }
+
+.SentenceCard{
+    border: 1px solid black;
+}
