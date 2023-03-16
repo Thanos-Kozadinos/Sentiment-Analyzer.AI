@@ -1,5 +1,5 @@
 import React, {FC} from 'react'
-import { ISentence, IUser, userRequest } from '../Services/Services'
+import { ISentence, IUser } from '../Services/Services'
 import './SentenceCard.css';
 
 type SentenceCardProps = {
@@ -15,7 +15,8 @@ type SentenceCardProps = {
             <div>{s.text}</div>
             <div className='Gallery_SentenceCard-prediction'>
                 <div>{s.forecastedSentiment?"Negative":"Positive"}</div>
-                <div>{Math.round(s.probability*100)+ "%"}</div>
+                {/* <div>{Math.round(s.probability*100)+ "%"}</div> */}
+                <div>{s.forecastedSentiment?Math.round(s.probability*100)+ "%":100 -Math.round(s.probability*100)+ "%"}</div>
             </div>
         </div>
         )}

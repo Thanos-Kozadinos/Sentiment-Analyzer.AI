@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { IUser, userRequest } from '../Services/Services'
+import { IUser} from '../Services/Services'
 import './UserCard.css';
 
 type UserCardProps = {
@@ -8,7 +8,7 @@ type UserCardProps = {
 }
 
 export const UserCard: FC<UserCardProps> = ({ user, showSentencesOfUser }) => {
-
+console.log(user);
     return (
 
         <div className='Gallery_UserCard-user-name' onClick={() => { showSentencesOfUser(user.id) }}>
