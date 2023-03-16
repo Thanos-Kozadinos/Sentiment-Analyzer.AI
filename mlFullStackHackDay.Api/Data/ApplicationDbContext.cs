@@ -12,5 +12,5 @@ public class ApplicationDbContext : DbContext
 
     public DbSet<User> Users { get; set; } = default!;
     public DbSet<Sentence> Sentences { get; set; } = default!;
-
+    public DbSet<DataFormFile> Files { get; set; } = default!;
 }

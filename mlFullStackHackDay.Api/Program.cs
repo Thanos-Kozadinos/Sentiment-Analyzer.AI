@@ -22,6 +22,12 @@ builder.Services.AddPredictionEnginePool<SampleObservation, SamplePrediction>()
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    SeedDataFromFile.Initialize(services);
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

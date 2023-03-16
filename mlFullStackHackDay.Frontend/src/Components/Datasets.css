@@ -1,0 +1,13 @@
+.datasets{
+    font-family: 'Inconsolata', monospace;
+    font-size:x-large
+}
+
+.datasets-table{
+    /* display: flex;
+    flex-direction: column;
+    gap: 30px; */
+    text-align: left;
+    width: 100%;
+    border: 1px solid white
+}

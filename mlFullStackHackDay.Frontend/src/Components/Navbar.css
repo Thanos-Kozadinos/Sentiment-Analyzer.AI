@@ -1,0 +1,7 @@
+.navbar {
+    font-family: 'Press Start 2P', cursive;
+    color: whitesmoke;
+    display:  flex;
+    justify-content: center;
+    gap: 40px;
+}

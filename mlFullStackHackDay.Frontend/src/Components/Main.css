@@ -1,0 +1,34 @@
+#root {
+    max-width: 1280px;
+    width: 70%;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    /* font-family: 'Press Start 2P', cursive; */
+  }
+  
+  
+  /* @media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+      animation: logo-spin infinite 20s linear;
+    }
+  } */
+  .App-h3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Inconsolata', monospace;
+      font-size:x-large
+  }
+  
+  .testClass{
+    display: flex;
+    border: 2px solid white;
+    flex-direction: row;
+    gap:30%
+    /* justify-content: space-evenly; */
+  }
+  
+  .App-h1 {
+    font-family: 'Press Start 2P', cursive;
+  }

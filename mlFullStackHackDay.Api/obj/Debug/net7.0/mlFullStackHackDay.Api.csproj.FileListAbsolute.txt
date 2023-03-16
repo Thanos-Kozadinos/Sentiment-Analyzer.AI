@@ -584,3 +584,9 @@
 /Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/obj/Debug/net7.0/mlFullStackHackDay.Api.pdb
 /Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/obj/Debug/net7.0/mlFullStackHackDay.Api.genruntimeconfig.cache
 /Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/obj/Debug/net7.0/ref/mlFullStackHackDay.Api.dll
+/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/bin/Debug/net7.0/BitMiracle.LibTiff.NET.dll
+/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/bin/Debug/net7.0/IronSoftware.Drawing.Common.dll
+/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/bin/Debug/net7.0/SixLabors.Fonts.dll
+/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/bin/Debug/net7.0/SixLabors.ImageSharp.Drawing.dll
+/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/bin/Debug/net7.0/IronXL.dll
+/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/bin/Debug/net7.0/SixLabors.ImageSharp.dll
