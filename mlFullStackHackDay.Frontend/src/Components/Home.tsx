@@ -1,8 +1,9 @@
 import { FC, useEffect, useRef, useState } from 'react'
 import './Home.css'
-import { addNewUser, getUsersDataAxios, INewUser, ISentence, IUser, } from '../Services/Services';
+import { addNewUser, getUsersDataAxios, updateUser, INewUser, ISentence, IUpdateUser, IUser, } from '../Services/Services';
 import { Gallery } from './Gallery';
 import { AddUserForm } from './AddUserForm';
+import { UpdateUserForm } from './UpdateUserForm';
 
 
 const App: FC = () => {
@@ -21,6 +22,8 @@ const App: FC = () => {
 
   const [inputUsersData, setInputUsersData] = useState<IUser[]>([defaultUserData]);
   const [usersLength, setUsersLength] = useState<number>(1);
+  const [enableUpdate, setEnableUpdate] = useState<boolean>(false);
+  const [userToUpdate, setUserToUpdate] = useState<IUser>(defaultUserData);
 
   const loadUserData = async () => {
     const users = await getUsersDataAxios();
@@ -29,12 +32,24 @@ const App: FC = () => {
 
   }
 
-
   const addNewUsertoList = async (newUser: INewUser) => {
     const user = await addNewUser(newUser);
     const users = await getUsersDataAxios();
     setUsersLength(users.slice(-1)[0].id)
     setInputUsersData(users.reverse());
+  }
+
+  const updateUserToList = async (upUser: IUpdateUser) =>{
+    const user = await updateUser(upUser);
+    const users = await getUsersDataAxios();
+    setInputUsersData(users.reverse());
+  }
+
+  const enableUpdateFunc = () => {
+    setEnableUpdate(!enableUpdate)
+  }
+  const enableUpdateUser = (upUsr: IUser) => {
+    setUserToUpdate(upUsr);
   }
 
   useEffect(() => {
@@ -43,21 +58,25 @@ const App: FC = () => {
 
   if (usersLength > 1) {
     return (
-      <div className="App">
-          <AddUserForm addNewUsertoList={addNewUsertoList} />
-          <div className='App-h3'>
-            <h2>Names</h2>
-            <h2>Sentences</h2>
-            <h2>Sentiment</h2>
-          </div>
-          <div >
-            <Gallery users={inputUsersData} usersLength={usersLength} />
-          </div>
+      <div className="App0">
+        {enableUpdate ? <UpdateUserForm updateUserToList={updateUserToList} enableUpdateFunc={enableUpdateFunc} userToUpdate={userToUpdate}/>:
+        <AddUserForm addNewUsertoList={addNewUsertoList} />
+        }
+        {/* <AddUserForm addNewUsertoList={addNewUsertoList} />
+        <UpdateUserForm updateUserToList={updateUserToList}/> */}
+        <div className='App-h3'>
+          <h2>Names</h2>
+          <h2>Sentences</h2>
+          <h2>Sentiment</h2>
+        </div>
+        <div >
+          <Gallery users={inputUsersData} usersLength={usersLength} enableUpdateFunc={enableUpdateFunc} enableUpdateUser={enableUpdateUser}/>
+        </div>
       </div>
     )
   }
   return (
-<></>
+    <></>
   )
 }
 

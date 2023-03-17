@@ -114,5 +114,28 @@ namespace mlFullStackHackDay.Api.Controllers
             // }
             return Ok(fileData);
         }
+
+        // [HttpPut("{id}")]
+        [HttpPut]
+        public async Task<ActionResult<User>> updateUser(UpdateUserDTO updateUserDTO)
+        {
+            SampleObservation sampleData = new SampleObservation() { Text = updateUserDTO.Text };
+            //Predict sentiment
+            SamplePrediction prediction = _predictionEnginePool.Predict(sampleData);
+
+            var newSentence = new Sentence
+            {
+                Text = updateUserDTO.Text,
+                ForecastedSentiment = prediction.Prediction,
+                Probability = prediction.Probability
+            };
+            var user = await _context.Users
+                .Include(u => u.Sentences)
+                .FirstOrDefaultAsync(us => us.Id == updateUserDTO.Id);
+            user.Sentences.Add(newSentence);
+            await _context.SaveChangesAsync();
+            return Ok(user);
+        }
+        
     }
 }

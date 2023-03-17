@@ -6,10 +6,12 @@ import { UserCard } from './UserCard';
 
 type GalleryProps = {
   users: IUser[],
-  usersLength: number
+  usersLength: number,
+  enableUpdateFunc: () => void,
+  enableUpdateUser: (upId: IUser) => void
 }
 
-export const Gallery: FC<GalleryProps> = ({ users ,usersLength}) => {
+export const Gallery: FC<GalleryProps> = ({ users ,usersLength, enableUpdateFunc, enableUpdateUser}) => {
   const [showSentences, setShowSentences] = useState<number>(usersLength);
 
   useEffect(() => {
@@ -19,7 +21,6 @@ export const Gallery: FC<GalleryProps> = ({ users ,usersLength}) => {
   const showSentencesOfUser = (devId: number) => {
     setShowSentences(devId);
   }
-  console.log(showSentences);
   return (
 
     <div className='Gallery'>
@@ -27,7 +28,7 @@ export const Gallery: FC<GalleryProps> = ({ users ,usersLength}) => {
         {/* <h4>Names</h4> */}
         <div >{users.map(user => <div>
           <div >
-            <UserCard user={user} showSentencesOfUser={showSentencesOfUser} />
+            <UserCard user={user} showSentencesOfUser={showSentencesOfUser} enableUpdateFunc={enableUpdateFunc} enableUpdateUser={enableUpdateUser}/>
           </div>
         </div>
 

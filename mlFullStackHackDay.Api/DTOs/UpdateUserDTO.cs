@@ -1,8 +1,8 @@
 namespace mlFullStackHackDay.Api.DTOs;
 
-public class CreateUserDTO
+public class UpdateUserDTO
 {
-    public required string Name { get; set; }
+    public required int Id { get; set; }
     public required string Text { get; set; }
 
 }

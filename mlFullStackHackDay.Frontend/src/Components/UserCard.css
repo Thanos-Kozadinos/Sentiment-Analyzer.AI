@@ -1,12 +1,12 @@
-.Gallery_UserCard-user-name{
+.Gallery_UserCard-user-name-and-update{
     display: flex;
-    border-bottom: 1px solid rgb(133, 131, 131);
-    flex-direction: column;
-    justify-content: space-evenly;
-    border-radius: 30%;
-    
+    flex-direction: row;
+    justify-content: space-between;
   }
-
+.Gallery_UserCard-user-name{
+  border-bottom: 1px solid rgb(133, 131, 131);
+  border-radius: 30%;
+}
   .Gallery_UserCard-user-name:hover{
     background-color: rgb(133, 131, 131);
     /* cursor: pointer; */
@@ -16,4 +16,11 @@
   .Gallery_UserCard-user-name:active{
     background-color: rgb(212, 136, 200);
 
+  }
+
+  .UserCard-updateBtn{
+    font-family: 'Press Start 2P', cursive;
+    color: antiquewhite;
+    background-color: transparent;
+    border-radius: 30%;
   }

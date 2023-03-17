@@ -5,16 +5,17 @@
     justify-content:space-between;
     /* font-family: 'Press Start 2P', cursive; */
     /* font-size: large; */
-    max-height: 500px;
+    max-height: 600px;
+    gap: 50px;
 
     font-family: 'Inconsolata', monospace;
     font-size:xx-large
   }
 
 .Gallery-SentenceCard{
-    width: 80%;
+    width: 70%;
 }
 
 .Gallery-UserCard{
-    overflow: scroll;
+    overflow:scroll;
 }

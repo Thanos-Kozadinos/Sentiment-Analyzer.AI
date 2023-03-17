@@ -11,18 +11,20 @@ import Home from './Components/Home';
 const App: FC = () => {
 
   return (
-    <div className="App">
-      <h1 className='App-h1'>Sentiment.AI</h1>
-      <div>
+    // <div className="App">
+    //   {/* <h1 className='App-h1'>Sentiment.AI</h1> */}
+    //   <div className="App-div">
         <BrowserRouter>
           <Navbar />
+        {/* <div className='navTest'>
+        </div> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/datasets" element={<Datasets />} />
           </Routes>
         </BrowserRouter>
-      </div>
-    </div>
+    //   </div>
+    // </div>
   )
 }
 

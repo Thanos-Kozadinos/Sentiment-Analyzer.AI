@@ -3,9 +3,11 @@
     /* border: 1px solid white; */
     flex-direction: row;
     justify-content:space-between;
-    gap: 10px;
+    gap: 70px;
     width: 100%;
     border-bottom: 1px solid white;
+    height: 100px;
+    align-items:flex-end;
 }
 
 .Gallery_SentenceCard-prediction {
@@ -14,10 +16,16 @@
     /* flex-direction: row; */
     /* justify-content:flex-start */
     align-content: space-between;
-    gap: 10px;
+    gap: 20px;
     font-family: 'Inconsolata', monospace;
+    /* border: 1px solid white;
+    border-radius: 20%; */
+    align-items:center;
 }
 
-.Gallery_SentenceCard-Negative{
-    
+.Gallery_SentenceCard-sentences-text {
+    text-align: left;
+    /* border-bottom: 1px solid white; */
+
 }
+
