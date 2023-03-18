@@ -1,7 +1,6 @@
-import React, { FC, SyntheticEvent, useEffect, useState } from 'react'
-import { INewUser, ISentence, IUser, } from '../Services/Services'
+import React, { FC, SyntheticEvent, useState } from 'react'
+import { INewUser} from '../Services/Interfaces'
 import './AddUserForm.scss';
-// @use '/AddUserForm.scss';
 
 type AddUserFormProps = {
     addNewUsertoList: (user: INewUser) => void

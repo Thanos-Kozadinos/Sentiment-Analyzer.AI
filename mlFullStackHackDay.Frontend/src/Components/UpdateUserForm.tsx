@@ -1,7 +1,6 @@
-import React, { FC, SyntheticEvent, useEffect, useState } from 'react'
-import { IUpdateUser, ISentence, IUser, } from '../Services/Services'
+import React, { FC, SyntheticEvent, useEffect, useState } from 'react';
+import {IUpdateUser, IUser, } from '../Services/Interfaces';
 import './UpdateUserForm.scss';
-// @use '/AddUserForm.scss';
 
 type UpdateUserFormProps = {
     updateUserToList: (user: IUpdateUser) => void,
@@ -27,9 +26,6 @@ export const UpdateUserForm: FC<UpdateUserFormProps> = ({ updateUserToList,enabl
             <input className='UpdateUserForm-sentence' onChange={(e) => {
                 setSentimentText(e.target.value);
             }} placeholder='Enter sentence for sentiment analysis' type="text" />
-            {/* <button className='UpdateUserForm-buton' onClick={() => {
-            enableUpdateFunc();
-            } }>Update</button> */}
             <button className='UpdateUserForm-buton'>Update</button>
         </form>
     )

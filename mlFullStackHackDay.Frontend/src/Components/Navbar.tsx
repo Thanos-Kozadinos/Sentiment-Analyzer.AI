@@ -2,9 +2,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css'
 
 const Navbar = () => {
-    const navigate = useNavigate();
     return (
-        <div className='alex'>
+        <div >
             <h1 className='App-h1'>Sentiment.AI</h1>
             <nav className='navbar'>
                 <div>

@@ -4,7 +4,6 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  /* font-family: 'Press Start 2P', cursive; */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -19,9 +18,4 @@
   font-size: x-large
 }
 
-/* .App-h1 {
-  font-family: 'Press Start 2P', cursive;
-  position:fixed;
-  top: 0px;
-} */
 

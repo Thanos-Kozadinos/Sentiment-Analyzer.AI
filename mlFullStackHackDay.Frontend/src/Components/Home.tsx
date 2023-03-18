@@ -1,10 +1,10 @@
-import { FC, useEffect, useRef, useState } from 'react'
-import './Home.css'
-import { addNewUser, getUsersDataAxios, updateUser, INewUser, ISentence, IUpdateUser, IUser, } from '../Services/Services';
+import { FC, useEffect, useRef, useState } from 'react';
+import './Home.css';
+import { addNewUser, getUsersDataAxios, updateUser,} from '../Services/Services';
+import { INewUser, ISentence, IUpdateUser, IUser} from '../Services/Interfaces';
 import { Gallery } from './Gallery';
 import { AddUserForm } from './AddUserForm';
 import { UpdateUserForm } from './UpdateUserForm';
-
 
 const App: FC = () => {
   const defaultSentenceData: ISentence = {
@@ -58,12 +58,10 @@ const App: FC = () => {
 
   if (usersLength > 1) {
     return (
-      <div className="App0">
+      <div>
         {enableUpdate ? <UpdateUserForm updateUserToList={updateUserToList} enableUpdateFunc={enableUpdateFunc} userToUpdate={userToUpdate}/>:
         <AddUserForm addNewUsertoList={addNewUsertoList} />
         }
-        {/* <AddUserForm addNewUsertoList={addNewUsertoList} />
-        <UpdateUserForm updateUserToList={updateUserToList}/> */}
         <div className='App-h3'>
           <h2>Names</h2>
           <h2>Sentences</h2>

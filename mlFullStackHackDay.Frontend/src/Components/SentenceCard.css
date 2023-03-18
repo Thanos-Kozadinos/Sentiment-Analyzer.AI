@@ -1,6 +1,5 @@
 .Gallery_SentenceCard-sentences {
     display: flex;
-    /* border: 1px solid white; */
     flex-direction: row;
     justify-content:space-between;
     gap: 70px;
@@ -11,21 +10,13 @@
 }
 
 .Gallery_SentenceCard-prediction {
-    /* border: 1px solid rgb(216, 17, 17); */
     display: flex;
-    /* flex-direction: row; */
-    /* justify-content:flex-start */
     align-content: space-between;
     gap: 20px;
     font-family: 'Inconsolata', monospace;
-    /* border: 1px solid white;
-    border-radius: 20%; */
     align-items:center;
 }
 
 .Gallery_SentenceCard-sentences-text {
     text-align: left;
-    /* border-bottom: 1px solid white; */
-
 }
-

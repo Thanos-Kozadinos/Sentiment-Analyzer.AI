@@ -1,5 +1,5 @@
 import React, {FC} from 'react'
-import { ISentence, IUser } from '../Services/Services'
+import { INewUser, ISentence} from '../Services/Interfaces';
 import './SentenceCard.css';
 
 type SentenceCardProps = {
@@ -22,3 +22,4 @@ type SentenceCardProps = {
       </div>
     )
   }
+  

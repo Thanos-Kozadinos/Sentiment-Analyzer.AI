@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { getDataFromFileAxios, IFile } from '../Services/Services';
+import { getDataFromFileAxios } from '../Services/Services';
+import { IFile} from '../Services/Interfaces'
 import './Datasets.css'
 
 const Datasets = () => {
@@ -17,7 +18,7 @@ const Datasets = () => {
 
     return (
         <div className="datasets">
-            <h3 >Ensemble Machine Learning model: Logistic Regression, Support Vector Machines, Linear Regression</h3>
+            <h3 > Machine Learning model: Logistic Regression</h3>
             <h3 >Metrics for ML model</h3>
             <div>
                 <table className='datasets-table'>
@@ -57,14 +58,3 @@ const Datasets = () => {
 }
 
 export default Datasets;
-
-// *       Accuracy: 84.81%
-// *       Area Under Curve:      92.34%
-// *       Area under Precision recall Curve:  92.27%
-// *       F1Score:  84.81%
-// *       LogLoss:  .52
-// *       LogLossReduction:  .48
-// *       PositivePrecision:  .85
-// *       PositiveRecall:  .85
-// *       NegativePrecision:  .85
-// *       NegativeRecall:  84.60%

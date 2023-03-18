@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react'
-import { IUser } from '../Services/Services'
+import { IUser, } from '../Services/Interfaces';
 import './UserCard.css';
 
 type UserCardProps = {

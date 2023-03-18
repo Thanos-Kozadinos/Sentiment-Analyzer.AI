@@ -5,8 +5,7 @@ namespace mlFullStackHackDay.Api.Models;
 public class User
 {
     public int Id { get; set; }
-    public required string Name { get; set; } // somehow enforce it to be unique?
-    // [JsonIgnore]
+    public required string Name { get; set; } 
     public List<Sentence>? Sentences { get; set; }
 
 }

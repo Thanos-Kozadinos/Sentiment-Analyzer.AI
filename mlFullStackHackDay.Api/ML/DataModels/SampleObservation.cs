@@ -9,14 +9,3 @@ public class SampleObservation
     [LoadColumn(0)]
     public string Text { get; set; }
 }
-
-// public class SampleObservation
-//     {
-//         [ColumnName("Label")]
-//         public bool IsToxic { get; set; }
-
-
-//         [ColumnName("Text")]
-//         public string SentimentText { get; set; }
-
-//     }

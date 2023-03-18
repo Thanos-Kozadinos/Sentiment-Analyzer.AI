@@ -27,18 +27,14 @@ namespace mlFullStackHackDay.Api.Controllers
         }
 
         [HttpGet]
-        // [Route("/[action]")]
         public ActionResult<string> PredictSentiment([FromQuery] string sentimentText)
         {
             SampleObservation sampleData = new SampleObservation() { Text = sentimentText };
-
-            //Predict sentiment
             SamplePrediction prediction = _predictionEnginePool.Predict(sampleData);
 
             bool isToxic = prediction.Prediction;
             bool test = prediction.Prediction;
 
-            // float probability = CalculatePercentage(prediction.Score);
             var probability = prediction.Probability;
             string retVal = $"Prediction: Is Toxic?: '{isToxic.ToString()}' with {probability.ToString()}% probability of toxicity  for the text '{sentimentText}'";
 
@@ -55,10 +51,10 @@ namespace mlFullStackHackDay.Api.Controllers
         public async Task<ActionResult<User>> GetUsers()
         {
             var users = await _context.Users.Include(u => u.Sentences).ToListAsync();
-            // if (users is null)
-            // {
-            //     return NotFound();
-            // }
+            if (users is null)
+            {
+                return NotFound();
+            }
             return Ok(users);
         }
 
@@ -68,10 +64,10 @@ namespace mlFullStackHackDay.Api.Controllers
             var user = await _context.Users
                 .Include(u => u.Sentences)
                 .FirstOrDefaultAsync(us => us.Id == id);
-            // if (user is null)
-            // {
-            //     return NotFound();
-            // }
+            if (user is null)
+            {
+                return NotFound();
+            }
             return Ok(user);
         }
 
@@ -108,14 +104,14 @@ namespace mlFullStackHackDay.Api.Controllers
         public async Task<ActionResult<User>> GetDataFromFile()
         {
             var fileData = await _context.Files.ToListAsync();
-            // if (users is null)
-            // {
-            //     return NotFound();
-            // }
+            if (fileData is null)
+            {
+                return NotFound();
+            }
             return Ok(fileData);
         }
 
-        // [HttpPut("{id}")]
+
         [HttpPut]
         public async Task<ActionResult<User>> updateUser(UpdateUserDTO updateUserDTO)
         {

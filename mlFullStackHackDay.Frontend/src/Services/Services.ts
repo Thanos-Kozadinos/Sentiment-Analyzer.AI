@@ -1,34 +1,6 @@
 import axios from 'axios';
+import {IFile, INewUser, ISentence, IUpdateUser, IUser,} from './Interfaces'
 
-export interface ISentence {
-  id: number,
-  text: string,
-  forecastedSentiment: boolean,
-  probability: number,
-  realSentiment: boolean
-}
-
-export interface IUser {
-  id: number,
-  name: string,
-  sentences: ISentence[]
-}
-
-export interface INewUser {
-  name: string,
-  text: string
-}
-
-export interface IFile {
-  id: number,
-  text: string,
-  realSentiment: boolean
-}
-
-export interface IUpdateUser {
-  id: number,
-  text: string
-}
 
 export const getUsersDataAxios = async () => {
   const response = await axios.get<IUser[]>('http://localhost:5290/api/GetUsers');
@@ -67,5 +39,3 @@ export const updateUser = async (user: IUpdateUser) => {
   return json.user;
 };
 
-
-export { }

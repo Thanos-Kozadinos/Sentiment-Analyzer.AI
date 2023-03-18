@@ -5,9 +5,6 @@
 }
 
 .datasets-table {
-    /* display: flex;
-    flex-direction: column;
-    gap: 30px; */
     text-align: left;
     width: 100%;
     border: 1px solid white
@@ -24,7 +21,6 @@
 
 .Datasets-files-sentiment {
     font-family: 'Press Start 2P', cursive;
-    /* border: 1px solid white; */
     width: 20%;
 }
 

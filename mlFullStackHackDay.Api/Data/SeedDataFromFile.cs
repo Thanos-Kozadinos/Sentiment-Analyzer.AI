@@ -1,10 +1,6 @@
-using System.Globalization;
-using Microsoft.CodeAnalysis.Elfie.Serialization;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic.FileIO;
 using mlFullStackHackDay.Api.Data;
 using mlFullStackHackDay.Api.Models;
-using IronXL;
 public static class SeedDataFromFile
 {
     public static void Initialize(IServiceProvider serviceProvider)
@@ -28,9 +24,6 @@ public static class SeedDataFromFile
                 context.Files.Add(newFile);
                 context.SaveChanges();
             }
-
-
-
         }
     }
 }
