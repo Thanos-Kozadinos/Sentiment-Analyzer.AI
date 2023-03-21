@@ -9,11 +9,11 @@ public class ApplicationDbContext : DbContext
             : base(options)
     {
     }
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        var configuration = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
-        optionsBuilder.UseSqlServer(configuration.GetSection("ConnectionStrings:DefaultConnection").Value);
-    }
+    // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    // {
+    //     var configuration = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
+    //     optionsBuilder.UseSqlServer(configuration.GetSection("ConnectionStrings:DefaultConnection").Value);
+    // }
 
     public DbSet<User> Users { get; set; } = default!;
     public DbSet<Sentence> Sentences { get; set; } = default!;
