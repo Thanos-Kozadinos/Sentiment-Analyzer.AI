@@ -9,3 +9,4 @@ The database used is SQL, the backend is dotnet web api and for the frontend Rea
 For the machine learning algorith ML.NET was used to train a Binary Classification model with 50000 data entries from IMDB reviews. The data were fetched from kaggle.com
 
 Future Improvemets: Comming soon....
+
