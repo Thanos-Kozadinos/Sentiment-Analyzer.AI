@@ -41,17 +41,18 @@ if (app.Environment.IsDevelopment())
       });
 }
 
-if (app.Environment.IsProduction())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-    app.UseCors(policy =>
-      {
-          policy.AllowAnyOrigin()
-                  .AllowAnyMethod()
-                  .AllowAnyHeader();  //set the allowed origin
-      });
-}
+//////////////////////
+
+//////////////////////
+app.UseSwagger();
+app.UseSwaggerUI();
+app.UseCors(policy =>
+  {
+      policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();  //set the allowed origin
+  });
+
 
 
 app.UseHttpsRedirection();
