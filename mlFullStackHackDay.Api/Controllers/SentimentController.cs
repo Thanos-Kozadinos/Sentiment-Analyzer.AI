@@ -128,7 +128,7 @@ namespace mlFullStackHackDay.Api.Controllers
             var user = await _context.Users
                 .Include(u => u.Sentences)
                 .FirstOrDefaultAsync(us => us.Id == updateUserDTO.Id);
-            user.Sentences.Add(newSentence);
+            user?.Sentences?.Add(newSentence);
             await _context.SaveChangesAsync();
             return Ok(user);
         }
