@@ -5,7 +5,7 @@ using Microsoft.Extensions.ML;
 using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
-
+// original
 
 // Add services to the container.
 
@@ -77,3 +77,6 @@ app.UseCors("CorsPolicy");
 app.MapControllers();
 
 app.Run();
+
+
+Server=tcp:sentimentserver.database.windows.net,1433;Initial Catalog=sentimentDb;Persist Security Info=False;User ID=thanos;Password=sentiment1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;

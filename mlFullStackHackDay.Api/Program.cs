@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ApplicationDbContext")));
 
 builder.Services.AddPredictionEnginePool<SampleObservation, SamplePrediction>()
                     .FromFile(builder.Configuration["MLModel:MLModelFilePath"]);
