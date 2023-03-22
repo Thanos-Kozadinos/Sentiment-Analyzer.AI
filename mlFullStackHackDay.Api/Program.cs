@@ -31,9 +31,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-
-
-
+app.UseDefaultFiles();
+app.UseStaticFiles();
+app.UseRouting();
 
 using (var scope = app.Services.CreateScope())
 {

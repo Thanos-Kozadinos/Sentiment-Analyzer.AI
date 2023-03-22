@@ -79,3 +79,6 @@ app.MapControllers();
 app.Run();
 
 
+Server=tcp:sentimentservernew.database.windows.net,1433;Initial Catalog=sentimentdbnew;Persist Security Info=False;User ID=thanos;Password=sentiment1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+
+dotnet user-secrets set ConnectionStrings:NewString "Server=tcp:sentimentservernew.database.windows.net,1433;Initial Catalog=sentimentdbnew;Persist Security Info=False;User ID=thanos;Password=sentiment1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
