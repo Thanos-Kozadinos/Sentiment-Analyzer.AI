@@ -30,7 +30,7 @@ namespace mlFullStackHackDay.Api.Controllers
         public ActionResult<string> PredictSentiment([FromQuery] string sentimentText)
         {
             SampleObservation sampleData = new SampleObservation() { Text = sentimentText };
-            SamplePrediction prediction = _predictionEnginePool.Predict(sampleData);
+            SamplePrediction prediction = _predictionEnginePool.Predict(modelName: "SentimentAnalysisModel", example: sampleData);
 
             bool isToxic = prediction.Prediction;
             bool test = prediction.Prediction;
