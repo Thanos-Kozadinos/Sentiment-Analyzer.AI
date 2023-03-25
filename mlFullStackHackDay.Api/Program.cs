@@ -5,8 +5,11 @@ using Microsoft.Extensions.ML;
 using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("NewString")));
+// builder.Services.AddDbContext<ApplicationDbContext>(options =>
+//     options.UseSqlServer(builder.Configuration.GetConnectionString("NewString")));
+
+builder.Services.AddDbContext<ApplicationDbContext>(options => 
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // builder.Services.AddPredictionEnginePool<SampleObservation, SamplePrediction>()
 //                     .FromFile(builder.Configuration["MLModel:MLModelFilePath"]);
