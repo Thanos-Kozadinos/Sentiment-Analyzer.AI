@@ -8,8 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("NewString")));
 
+// builder.Services.AddPredictionEnginePool<SampleObservation, SamplePrediction>()
+//                     .FromFile(builder.Configuration["MLModel:MLModelFilePath"]);
+
 builder.Services.AddPredictionEnginePool<SampleObservation, SamplePrediction>()
-                    .FromFile(builder.Configuration["MLModel:MLModelFilePath"]);
+    .FromFile(modelName: "SentimentAnalysisModel", filePath: "mlFullStackHackDay.Api/ML/SentimentModel.zip");
+
 // Add services to the container.
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -40,6 +44,7 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     SeedDataFromFile.Initialize(services);
 }
+
 // Configure the HTTP request pipeline.
 app.UseSwagger();
 app.UseSwaggerUI();
