@@ -117,7 +117,7 @@ namespace mlFullStackHackDay.Api.Controllers
         {
             SampleObservation sampleData = new SampleObservation() { Text = updateUserDTO.Text };
             //Predict sentiment
-            SamplePrediction prediction = _predictionEnginePool.Predict(sampleData);
+            SamplePrediction prediction = _predictionEnginePool.Predict(modelName: "SentimentAnalysisModel", example: sampleData);
 
             var newSentence = new Sentence
             {
