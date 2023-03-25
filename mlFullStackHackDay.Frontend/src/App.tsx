@@ -7,6 +7,7 @@ import Navbar from './Components/Navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Datasets from './Components/Datasets';
 import Home from './Components/Home';
+import { SinglePrediction } from './Components/SinglePrediction';
 
 const App: FC = () => {
 
@@ -14,7 +15,8 @@ const App: FC = () => {
         <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path ="/" element ={<SinglePrediction/>}/>
+            <Route path="/home" element={<Home />} />
             <Route path="/datasets" element={<Datasets />} />
           </Routes>
         </BrowserRouter>

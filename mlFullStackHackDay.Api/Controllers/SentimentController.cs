@@ -36,7 +36,8 @@ namespace mlFullStackHackDay.Api.Controllers
             bool test = prediction.Prediction;
 
             var probability = prediction.Probability;
-            string retVal = $"Prediction: Is Toxic?: '{isToxic.ToString()}' with {probability.ToString()}% probability of toxicity  for the text '{sentimentText}'";
+            // string retVal = $"Prediction: Is Toxic?: '{isToxic.ToString()}' with {probability.ToString()}% probability of toxicity  for the text '{sentimentText}'";
+            string retVal = $"Prediction: Is Negative?: '{isToxic.ToString()}' with {probability.ToString()}% probability of negativity  for the sentence '{sentimentText}'";
 
 
             return retVal;

@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import { IUser, } from '../Services/Interfaces';
 import './UserCard.css';
 
@@ -12,6 +12,12 @@ type UserCardProps = {
 export const UserCard: FC<UserCardProps> = ({ user, showSentencesOfUser, enableUpdateFunc, enableUpdateUser }) => {
     const [showUpdate, setShowUpdate] = useState(false);
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowUpdate(false)
+        }, 4000);
+      }, [showUpdate]);
+
     return (
 
         <div className='Gallery_UserCard-user-name-and-update' onClick={() => {
@@ -22,9 +28,15 @@ export const UserCard: FC<UserCardProps> = ({ user, showSentencesOfUser, enableU
             {
                 showUpdate ? <button className='UserCard-updateBtn' onClick={() => {
                     //   deleteDev?.(person.id)
+
                     enableUpdateUser(user)
                     enableUpdateFunc();
                 }}>Update</button> : null
+            }
+            {
+                showUpdate ? <button className='UserCard-updateBtn' onClick={() => {
+                    //   deleteDev?.(person.id)
+                }}>Delete</button> : null
             }
         </div>
 

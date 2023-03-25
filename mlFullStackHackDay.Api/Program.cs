@@ -11,11 +11,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDbContext>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// builder.Services.AddPredictionEnginePool<SampleObservation, SamplePrediction>()
-//                     .FromFile(builder.Configuration["MLModel:MLModelFilePath"]);
-
 builder.Services.AddPredictionEnginePool<SampleObservation, SamplePrediction>()
-    .FromFile(modelName: "SentimentAnalysisModel", filePath: "mlFullStackHackDay.Api/ML/SentimentModel.zip");
+                    .FromFile(builder.Configuration["MLModel:MLModelFilePath"]);
+
+// builder.Services.AddPredictionEnginePool<SampleObservation, SamplePrediction>()
+//     .FromFile(modelName: "SentimentAnalysisModel", filePath: "mlFullStackHackDay.Api/ML/SentimentModel.zip");
 
 // Add services to the container.
 builder.Services.AddControllers();

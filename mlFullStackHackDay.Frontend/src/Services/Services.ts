@@ -39,3 +39,8 @@ export const updateUser = async (user: IUpdateUser) => {
   return json.user;
 };
 
+export const getPredictionAxios = async (text:string) => {
+  const response = await axios.get<string>(`http://localhost:5290/api/PredictSentiment?sentimentText=${text}`);
+  return response.data;
+};
+
