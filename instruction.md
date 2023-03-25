@@ -101,3 +101,9 @@ mkdir  ML
   }
 
 https://newsentimentaiapi.scm.azurewebsites.net/api/vfs/LogFiles/eventlog.xml
+
+<ItemGroup>
+    <None Update="SentimentModel.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    </ItemGroup>
