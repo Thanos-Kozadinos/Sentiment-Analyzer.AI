@@ -100,3 +100,4 @@ mkdir  ML
     "MLModelFilePath": "ML/SentimentModel.zip"
   }
 
+https://newsentimentaiapi.scm.azurewebsites.net/api/vfs/LogFiles/eventlog.xml
