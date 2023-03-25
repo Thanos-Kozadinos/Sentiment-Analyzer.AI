@@ -12,7 +12,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 //                     .FromFile(builder.Configuration["MLModel:MLModelFilePath"]);
 
 builder.Services.AddPredictionEnginePool<SampleObservation, SamplePrediction>()
-    .FromFile(modelName: "SentimentAnalysisModel", filePath: "mlFullStackHackDay.Api/ML/SentimentModel.zip");
+    .FromFile(modelName: "SentimentAnalysisModel", filePath: "SentimentModel.zip");
 
 // Add services to the container.
 builder.Services.AddControllers();
