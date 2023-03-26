@@ -590,3 +590,9 @@
 /Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/bin/Debug/net7.0/SixLabors.ImageSharp.Drawing.dll
 /Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/bin/Debug/net7.0/IronXL.dll
 /Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/bin/Debug/net7.0/SixLabors.ImageSharp.dll
+/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/bin/Debug/net7.0/dotenv.net.dll
+/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/bin/Debug/net7.0/HandleR.dll
+/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/bin/Debug/net7.0/Microsoft.AspNetCore.Authorization.dll
+/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/bin/Debug/net7.0/Microsoft.AspNetCore.Metadata.dll
+/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Api/bin/Debug/net7.0/Microsoft.Extensions.Options.dll

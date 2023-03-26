@@ -8,7 +8,10 @@
     ".NETCoreApp,Version=v7.0": {
       "mlFullStackHackDay.Api/1.0.0": {
         "dependencies": {
+          "HandleR": "1.1.3",
           "IronXL.Excel": "2023.2.5",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.4",
+          "Microsoft.AspNetCore.Authorization": "7.0.4",
           "Microsoft.AspNetCore.OpenApi": "7.0.1",
           "Microsoft.EntityFrameworkCore": "7.0.4",
           "Microsoft.EntityFrameworkCore.Design": "7.0.4",
@@ -18,7 +21,8 @@
           "Microsoft.Extensions.ML": "2.0.1",
           "Microsoft.ML": "2.0.1",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.4",
-          "Swashbuckle.AspNetCore": "6.4.0"
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "dotenv.net": "3.1.2"
         },
         "runtime": {
           "mlFullStackHackDay.Api.dll": {}
@@ -66,6 +70,25 @@
           }
         }
       },
+      "dotenv.net/3.1.2": {
+        "runtime": {
+          "lib/netstandard2.1/dotenv.net.dll": {
+            "assemblyVersion": "3.1.2.0",
+            "fileVersion": "3.1.2.0"
+          }
+        }
+      },
+      "HandleR/1.1.3": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "7.0.0"
+        },
+        "runtime": {
+          "lib/net5.0/HandleR.dll": {
+            "assemblyVersion": "1.1.3.0",
+            "fileVersion": "1.1.3.0"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
@@ -103,6 +126,38 @@
           "lib/netstandard2.0/IronXL.dll": {
             "assemblyVersion": "2023.2.5.0",
             "fileVersion": "2023.2.5.0"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.4": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.21.0"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "assemblyVersion": "7.0.4.0",
+            "fileVersion": "7.0.423.11903"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authorization/7.0.4": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Metadata": "7.0.4",
+          "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Options": "7.0.1"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.Authorization.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.423.11903"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Metadata/7.0.4": {
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.Metadata.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.423.11903"
           }
         }
       },
@@ -1037,7 +1092,7 @@
           "Microsoft.Extensions.Caching.Abstractions": "7.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
-          "Microsoft.Extensions.Options": "7.0.0",
+          "Microsoft.Extensions.Options": "7.0.1",
           "Microsoft.Extensions.Primitives": "7.0.0"
         }
       },
@@ -1114,7 +1169,7 @@
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
-          "Microsoft.Extensions.Options": "7.0.0"
+          "Microsoft.Extensions.Options": "7.0.1"
         }
       },
       "Microsoft.Extensions.Logging.Abstractions/7.0.0": {},
@@ -1123,7 +1178,7 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
           "Microsoft.Extensions.Logging": "7.0.0",
           "Microsoft.Extensions.ObjectPool": "2.1.0",
-          "Microsoft.Extensions.Options": "7.0.0",
+          "Microsoft.Extensions.Options": "7.0.1",
           "Microsoft.ML": "2.0.1"
         },
         "runtime": {
@@ -1134,10 +1189,16 @@
         }
       },
       "Microsoft.Extensions.ObjectPool/2.1.0": {},
-      "Microsoft.Extensions.Options/7.0.0": {
+      "Microsoft.Extensions.Options/7.0.1": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
           "Microsoft.Extensions.Primitives": "7.0.0"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.Options.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.323.6910"
+          }
         }
       },
       "Microsoft.Extensions.Primitives/7.0.0": {},
@@ -2580,6 +2641,20 @@
       "path": "bitmiracle.libtiff.net/2.4.649",
       "hashPath": "bitmiracle.libtiff.net.2.4.649.nupkg.sha512"
     },
+    "dotenv.net/3.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lFm4hGX9JkNtAF36Uz4C3WT7MC6Ys802k0cPvlln8ydmH67GQjnToH+w645tQm1czAjW/V6tPE088lD77sYFGA==",
+      "path": "dotenv.net/3.1.2",
+      "hashPath": "dotenv.net.3.1.2.nupkg.sha512"
+    },
+    "HandleR/1.1.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bxFt/t7vWGN1PHmHuAfML8pWzXV2WwApoeb7+1t/O8NK+v+853oJkQK1ih7XFI/VlaNXv9domHz+uO+FTXXsLA==",
+      "path": "handler/1.1.3",
+      "hashPath": "handler.1.1.3.nupkg.sha512"
+    },
     "Humanizer.Core/2.14.1": {
       "type": "package",
       "serviceable": true,
@@ -2600,6 +2675,27 @@
       "sha512": "sha512-E4PAGiw7c5jbg0DTU5jUVukjco6nAEvULrtVSlh36GgXKjRyi7e/Svcyh+49GYmM8HTQCYJ1ACpwMvpDtPEMNw==",
       "path": "ironxl.excel/2023.2.5",
       "hashPath": "ironxl.excel.2023.2.5.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yMCO9yU1kNQ5MomCnGDNsjPyIvnxHu4U7AfRkLmzZuzCeOGGA5XiehmpfzzqlyIs8wbSR/c6jbuLexedfKgjgA==",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/7.0.4",
+      "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.7.0.4.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authorization/7.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ccVCRKKSclEs88EN61pJkVModWE3e0h/YnLZYBgBoelUZSIbbKuzcJBdnt03G+sGV3fU0oC365C0Zjmd2m8qfA==",
+      "path": "microsoft.aspnetcore.authorization/7.0.4",
+      "hashPath": "microsoft.aspnetcore.authorization.7.0.4.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Metadata/7.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AxRqILbKo0fwUFqazh88qRaWJfh3OOSOPE6tm/H+IOvX0hrn2M95dukO+ZEk+idL++oOoVkqK30AgUyPAKFF5g==",
+      "path": "microsoft.aspnetcore.metadata/7.0.4",
+      "hashPath": "microsoft.aspnetcore.metadata.7.0.4.nupkg.sha512"
     },
     "Microsoft.AspNetCore.OpenApi/7.0.1": {
       "type": "package",
@@ -2958,12 +3054,12 @@
       "path": "microsoft.extensions.objectpool/2.1.0",
       "hashPath": "microsoft.extensions.objectpool.2.1.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.Options/7.0.0": {
+    "Microsoft.Extensions.Options/7.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-lP1yBnTTU42cKpMozuafbvNtQ7QcBjr/CcK3bYOGEMH55Fjt+iecXjT6chR7vbgCMqy3PG3aNQSZgo/EuY/9qQ==",
-      "path": "microsoft.extensions.options/7.0.0",
-      "hashPath": "microsoft.extensions.options.7.0.0.nupkg.sha512"
+      "sha512": "sha512-pZRDYdN1FpepOIfHU62QoBQ6zdAoTvnjxFfqAzEd9Jhb2dfhA5i6jeTdgGgcgTWFRC7oT0+3XrbQu4LjvgX1Nw==",
+      "path": "microsoft.extensions.options/7.0.1",
+      "hashPath": "microsoft.extensions.options.7.0.1.nupkg.sha512"
     },
     "Microsoft.Extensions.Primitives/7.0.0": {
       "type": "package",

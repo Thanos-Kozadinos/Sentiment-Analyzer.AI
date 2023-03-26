@@ -100,3 +100,5 @@ mkdir  ML
     "MLModelFilePath": "ML/SentimentModel.zip"
   }
 
+dotnet add package dotenv.net
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
