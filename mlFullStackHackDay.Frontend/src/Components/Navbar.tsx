@@ -7,6 +7,9 @@ const Navbar = () => {
             <h1 className='App-h1'>Sentiment.AI</h1>
             <nav className='navbar'>
                 <div>
+                    <Link to='/'>Single Prediction</Link>
+                </div>
+                <div>
                     <Link to='/'>Home</Link>
                 </div>
                 <div>
