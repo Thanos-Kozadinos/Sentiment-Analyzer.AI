@@ -16,7 +16,7 @@ const App: FC = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<SinglePrediction />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/datasets" element={<Datasets />} />
       </Routes>
     </BrowserRouter>

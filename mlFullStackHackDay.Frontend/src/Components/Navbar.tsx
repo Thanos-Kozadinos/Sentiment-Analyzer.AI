@@ -10,7 +10,7 @@ const Navbar = () => {
                     <Link to='/'>Single Prediction</Link>
                 </div>
                 <div>
-                    <Link to='/'>Home</Link>
+                    <Link to='/home'>Home</Link>
                 </div>
                 <div>
                     <Link to='/datasets'>Datasets and ML metrics</Link>
