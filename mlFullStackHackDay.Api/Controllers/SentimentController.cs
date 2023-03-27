@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -49,6 +50,7 @@ namespace mlFullStackHackDay.Api.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<User>> GetUsers()
         {
             var users = await _context.Users.Include(u => u.Sentences).ToListAsync();
@@ -74,6 +76,7 @@ namespace mlFullStackHackDay.Api.Controllers
 
 
         [HttpPost]
+        [Authorize("read:usersentences")]
         public async Task<ActionResult<User>> createUser(CreateUserDTO createUserDTO)
         {
             SampleObservation sampleData = new SampleObservation() { Text = createUserDTO.Text };
@@ -132,6 +135,18 @@ namespace mlFullStackHackDay.Api.Controllers
             user?.Sentences?.Add(newSentence);
             await _context.SaveChangesAsync();
             return Ok(user);
+        }
+
+        // This is a helper action. It allows you to easily view all the claims of the token.
+        [HttpGet("claims")]
+        public IActionResult Claims()
+        {
+            return Ok(User.Claims.Select(c =>
+                new
+                {
+                    c.Type,
+                    c.Value
+                }));
         }
         
     }
