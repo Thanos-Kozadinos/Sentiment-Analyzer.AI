@@ -100,3 +100,20 @@ mkdir  ML
     "MLModelFilePath": "ML/SentimentModel.zip"
   }
 
+// for frontend form validation
+npm install react-hook-form yup 
+npm install @hookform/resolvers   
+
+dotnet add package OpenAI
+
+in program.cs :
+builder.Configuration.AddUserSecrets<Program>();
+var chatGptApiKey = builder.Configuration["chatGptApiKey:apiKey1"];
+
+in the controller: 
+private readonly IConfiguration _config;
+
+    public aiChefController(IConfiguration config)
+    {
+        _config = config;
+    }
