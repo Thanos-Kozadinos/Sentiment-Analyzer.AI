@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oPLDxDq5lEHZOBRhjH+ui1tPqcbo1Au4wLUEfMEI8qdz1LP+jpzB7h5hStLyHg9X/+Zu8XKmGH/E8gHIcC+YPA==",
+  "dgSpecHash": "vFJiSDuhzm+LEN6Jiuu3nHpU2N5B5Jvvj3XEwcGcP/RwH0+g6cHnm1RuVKkNfNLjzxxgOT74POE0Amron0xPgA==",
   "success": true,
   "projectFilePath": "/Users/salt-dev/newTHANOS/SALT_HACK_DAY/Sentiment-Analyzer.AI/mlFullStackHackDay.Tests/mlFullStackHackDay.Tests.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "/Users/salt-dev/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/salt-dev/.nuget/packages/ironsoftware.system.drawing/2023.2.12/ironsoftware.system.drawing.2023.2.12.nupkg.sha512",
     "/Users/salt-dev/.nuget/packages/ironxl.excel/2023.2.5/ironxl.excel.2023.2.5.nupkg.sha512",
+    "/Users/salt-dev/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/7.0.4/microsoft.aspnetcore.authentication.jwtbearer.7.0.4.nupkg.sha512",
     "/Users/salt-dev/.nuget/packages/microsoft.aspnetcore.openapi/7.0.1/microsoft.aspnetcore.openapi.7.0.1.nupkg.sha512",
     "/Users/salt-dev/.nuget/packages/microsoft.aspnetcore.razor.language/6.0.11/microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512",
     "/Users/salt-dev/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
